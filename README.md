@@ -8,7 +8,7 @@ This is a NativeScript codebase. You will need to have the NativeScript command 
 
 See the [NativeScript installation documentation](https://docs.nativescript.org/start/quick-setup) for details on getting the dependencies set up.
 
-You can use the [demo DB on my fms if you wish](fmp://fms.msdev.co.uk/ITG01Demo.fmp12) (username Admin, password Admin, switch to the Images layout) 
+You can use the demo DB on my fms if you wish (fmp://fms.msdev.co.uk/ITG01Demo.fmp12, username Admin, password Admin, switch to the Images layout) 
 
 To connect the app to your own FMS you need to modify the settings in /app/home/home.js.
 
