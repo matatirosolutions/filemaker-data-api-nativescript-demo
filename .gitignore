@@ -1,0 +1,7 @@
+### PhpStorm ###
+.idea/
+
+### NativeScript ###
+/node_modules/
+/platforms/
+
