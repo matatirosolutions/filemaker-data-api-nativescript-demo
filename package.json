@@ -6,19 +6,19 @@
   "nativescript": {
     "id": "org.msdev.fmimageuploader",
     "tns-ios": {
-      "version": "4.1.0"
+      "version": "5.4.2"
     },
     "tns-android": {
-      "version": "4.1.3"
+      "version": "5.4.0"
     }
   },
   "dependencies": {
     "base-64": "^0.1.0",
     "nativescript-background-http": "^3.3.0",
-    "nativescript-camera": "^4.0.2",
-    "nativescript-geolocation": "^4.3.0",
-    "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "4.1.1",
+    "nativescript-camera": "^4.4.1",
+    "nativescript-geolocation": "^5.1.0",
+    "nativescript-theme-core": "^2.0.2",
+    "tns-core-modules": "5.4.2",
     "utf8": "^3.0.0"
   },
   "devDependencies": {

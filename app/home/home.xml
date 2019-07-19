@@ -3,7 +3,7 @@
         <Label class="action-bar-title" text="FileMaker Image Uploader" />
     </ActionBar>
     <GridLayout rows="55, *" style="padding-bottom: 20px;">
-        <Button text="Take photo" class="btn btn-primary" tap="takePhoto" isEnabled="{{ !isLoading }}" />
+        <Button text="Take photo" class="btn btn-primary" tap="takePhoto" android:style="height: 50" isEnabled="{{ !isLoading }}" />
         <Image id="img" row="1" />
     </GridLayout>
 </Page>

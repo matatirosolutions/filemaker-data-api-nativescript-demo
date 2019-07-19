@@ -1,7 +1,6 @@
-var fetchModule = require("fetch");
+var fetchModule = require("tns-core-modules/fetch");
 var base64 = require('base-64');
 var utf8 = require('utf8');
-var FileSystem = require("file-system");
 var BackgroundHttp = require("nativescript-background-http");
 
 class FileMakerDataAPI {
@@ -10,7 +9,7 @@ class FileMakerDataAPI {
         this.config = config
     }
 
-    fetchToken(successCallback, errorCallback) { console.info('get me a token!');
+    fetchToken(successCallback, errorCallback) {
         let that = this;
 
         fetchModule.fetch(this.config.server + '/fmi/data/v1/databases/' + this.config.database + '/sessions', {
@@ -28,16 +27,6 @@ class FileMakerDataAPI {
             }).catch((error) => {
                 errorCallback(error);
             });
-    }
-
-    validateResponse(resp) {
-        var msg = resp.messages[0];
-        if(undefined === msg) {
-            throw Error('There is no message in the response. Check the URL.');
-        }
-        if('0' !== msg.code) {
-            throw Error(msg.message);
-        }
     }
 
     performRequest(method, urlSuffix, data, successCallback, errorCallback) {
@@ -78,12 +67,6 @@ class FileMakerDataAPI {
 
         let task = session.multipartUpload(params, request);
         task.on("complete", (event) => {
-            // let file = FileSystem.File.fromPath(filePath);
-            // file.remove().then(result => {
-            //     console.info('File deleted');
-            // }, error => {
-            //     console.info('Unable to delete file')
-            // });
             successCallback();
         });
         task.on("error", event => {
@@ -94,6 +77,15 @@ class FileMakerDataAPI {
         });
     }
 
+    validateResponse(resp) {
+        var msg = resp.messages[0];
+        if(undefined === msg) {
+            throw Error('There is no message in the response. Check the URL.');
+        }
+        if('0' !== msg.code) {
+            throw Error(msg.message);
+        }
+    }
 }
 
 module.exports = FileMakerDataAPI;

@@ -1,7 +1,6 @@
-var dialog = require("ui/dialogs");
+var dialog = require("tns-core-modules/ui/dialogs");
 var geolocation = require("nativescript-geolocation");
-var FileSystem = require("file-system");
-var view = require("ui/core/view");
+var FileSystem = require("tns-core-modules/file-system");
 
 class ImageCaptureManager {
 
@@ -10,8 +9,11 @@ class ImageCaptureManager {
         this.layout = layout;
         this.fmReady = false;
 
-
         this.api.fetchToken(this.fmReadyCallback.bind(this), this.constructor.handleError);
+        geolocation.enableLocationRequest()
+            .catch((error) => {
+                console.log(error);
+            });
     }
 
     saveAndUpload(image, page) {
@@ -60,7 +62,9 @@ class ImageCaptureManager {
 
     getLocation() {
         let that = this;
-        geolocation.getCurrentLocation()
+        let options = { desiredAccuracy: 100, maximumAge: 5000, timeout: 20000 };
+
+        geolocation.getCurrentLocation(options)
             .then((location) => {
                 that.location = location;
             })
