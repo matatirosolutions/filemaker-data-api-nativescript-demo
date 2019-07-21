@@ -1,6 +1,6 @@
 # Introduction to the FileMaker Data API - Native application demo #
 
-This code generates native iOS or Android app to interact with the FileMaker Data API and upload location information and a photo captured from the camera.
+This code generates a native iOS or Android app to interact with the FileMaker Data API and upload location information and a photo captured from the camera.
 
 ## Installation ##
 
