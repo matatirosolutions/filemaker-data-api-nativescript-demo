@@ -1,15 +1,15 @@
 {
   "description": "Demo app to upload images to FileMaker using the Data API.",
-  "license": "SEE LICENSE IN <your-license-filename>",
+  "license": "(c) Matatiro Solutions under MIT",
   "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "repository": "https://github.com/matatirosolutions/filemaker-data-api-nativescript-demo",
   "nativescript": {
     "id": "org.msdev.fmimageuploader",
     "tns-ios": {
-      "version": "5.4.2"
+      "version": "6.0.1"
     },
     "tns-android": {
-      "version": "5.4.0"
+      "version": "6.0.0"
     }
   },
   "dependencies": {
@@ -18,7 +18,7 @@
     "nativescript-camera": "^4.4.1",
     "nativescript-geolocation": "^5.1.0",
     "nativescript-theme-core": "^2.0.2",
-    "tns-core-modules": "5.4.2",
+    "tns-core-modules": "6.0.1",
     "utf8": "^3.0.0"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
     "lazy": "1.0.11",
-    "nativescript-dev-webpack": "~0.14.0"
+    "nativescript-dev-webpack": "1.0.1"
   },
   "author": "Matatiro Solutions"
 }
